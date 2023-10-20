@@ -1,0 +1,14 @@
+version : "3"
+
+services:
+  web:
+    build: ./web
+    command: gunicorn -w 1 -b 0.0.0.0:8000 application:application
+    ports:
+      - 8000
+  nginx:
+    build: ./nginx
+    depends_on:
+      - web
+    ports:
+      - 80:80
