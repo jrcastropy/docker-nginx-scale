@@ -13,7 +13,7 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - /root/castronaut.dev/nginx/ssl:/ssl
-      - /root/castronaut.dev/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - /root/docker-nginx-scale/nginx/ssl:/ssl
+      - /root/docker-nginx-scale/nginx/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - web

@@ -119,6 +119,11 @@ sudo nano /etc/letsencrypt/live/insertdomainhere.com/privkey.pem
 ```
 copy and save it inside ./nginx/ssl/privkey.pem
 
+## Stop NGINX from localhost
+```bash
+sudo systemctl stop nginx
+```
+
 ## Usage
 ```docker-compose
 docker-compose up --build --scale web=3
