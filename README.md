@@ -16,8 +16,8 @@ This repo is a template to run flask with docker-compose that is scalable and an
 ### First step if to Clone this repo to your server
 
 ### Point your domain to the server with A records
-- Create 'A' record to ubuntu server with "@" as hostname
-- Create 'A' record to ubuntu server with "www" as hostname
+- Create 'A' record to ubuntu server's IP address with "@" as hostname
+- Create 'A' record to ubuntu server's IP address with "www" as hostname
 
 ### Update Ubuntu Server
 [Update Ubuntu](https://www.cyberciti.biz/faq/upgrade-update-ubuntu-using-terminal/)
