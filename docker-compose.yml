@@ -3,12 +3,17 @@ version : "3"
 services:
   web:
     build: ./web
-    command: gunicorn -w 1 -b 0.0.0.0:8000 application:application
+    command: gunicorn -w 3 -b 0.0.0.0:8000 application:application
     ports:
       - 8000
+
   nginx:
-    build: ./nginx
-    depends_on:
-      - web
+    image: nginx:latest
     ports:
       - 80:80
+      - 443:443
+    volumes:
+      - /root/castronaut.dev/nginx/ssl:/ssl
+      - /root/castronaut.dev/nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - web
