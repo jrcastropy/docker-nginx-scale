@@ -46,7 +46,9 @@ sudo systemctl status docker
 [Install Docker Compose on Ubuntu 22.04](https://cloudinfrastructureservices.co.uk/how-to-install-and-use-docker-compose-on-ubuntu-22-04/)
 ```bash
 sudo apt install docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
+docker-compose version
 ```
 
 ### Check if docker-compose is running
